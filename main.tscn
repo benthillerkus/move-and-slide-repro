@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cejkvge2cg1dv"]
+
+[ext_resource type="Script" uid="uid://dokwjka2pcnxh" path="res://character_body_2d.gd" id="1_ig7tw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 5.0
+height = 18.0
+
+[node name="Node2D" type="Node2D" unique_id=1840975740]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1188121232]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1303925297]
+polygon = PackedVector2Array(-5, 652, -7, 637, 644, 637, 705, 632, 764, 614, 819, 577, 865, 523, 900, 461, 933, 361, 955, 251, 965, 146, 967, 69, 968, 43, 970, 38, 974, 33, 980, 31, 986, 30, 1160, 30, 1160, 656)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1419506044]
+floor_max_angle = 3.1415927
+script = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1517504518]
+position = Vector2(268, 630)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_g4v7s")
